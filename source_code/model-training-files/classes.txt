@@ -1,0 +1,5 @@
+image
+person
+surgical-area
+surgical-tool
+text

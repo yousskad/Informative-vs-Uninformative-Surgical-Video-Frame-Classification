@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['image', 'person', 'surgical-area', 'surgical-tool', 'text']
+
+roboflow:
+  workspace: works-ly0n7
+  project: surgical-segmentation-yh9n7
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/works-ly0n7/surgical-segmentation-yh9n7/dataset/3

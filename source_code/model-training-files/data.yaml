@@ -1,0 +1,10 @@
+path: surgical-segmentation-3
+train: train/images
+val: validation/images
+nc: 5
+names:
+- image
+- person
+- surgical-area
+- surgical-tool
+- text
