@@ -103,7 +103,7 @@ streamlit-app-video-classification/
 
 ---
 
-## Docker Setup (Containerized Deployment) [Alternative]
+## Docker Setup (Containerized Deployment) [Full Alternative]
 
 ### Prerequisites
 
