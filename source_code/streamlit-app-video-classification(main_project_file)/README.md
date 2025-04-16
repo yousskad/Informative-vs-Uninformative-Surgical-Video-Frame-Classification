@@ -2,8 +2,18 @@
 
 # Surgical vs. Non-Surgical Video Classification Tool
 
-This project provides a browser-based tool for binary classification of surgical and non-surgical videos using a YOLOv8 segmentation model. The interface is built with Streamlit and also the application is containerized with Docker for ease of deployment and scalability.
+This project provides a browser-based tool for binary classification of surgical and non-surgical videos using a YOLOv11 segmentation model. The interface is built with Streamlit and also the application is containerized with Docker for ease of deployment and scalability.
 
+---
+
+## Project Overview
+
+- **Task**: Binary classification of surgical vs. non-surgical video content  
+- **Model**: YOLOv11-seg (medium) fine-tuned on a custom dataset  
+- **Interface**: Streamlit-based interactive web application  
+- **Deployment Options**: Native Python environment or Docker container  
+
+---
 
 ## ⚠️ IMPORTANT NOTES
 
@@ -11,43 +21,22 @@ This project provides a browser-based tool for binary classification of surgical
 
 ---
 
-### 🔹 **Model File (`best-seg.pt`) Not Included**
+### 🔹 **Model File (`best-seg.pt`) Not Included in the zip (use all of this repository and ignore all of the zip file)**
 
-- ## The `best-seg.pt` model file is **NOT** included in the zip but in Github due to file size constraints.
-- ## The `model-training-files/` directory is **NOT** included in the zip but in Github due to file size constraints.
+- ## [Note: The `best-seg.pt` model file is **NOT** included in the zip but in Github due to file size constraints.]
+- ## [Note: The `model-training-files/` directory is **NOT** included in the zip but in Github due to file size constraints.]
 
 
 ### 🔹 **Clone the Complete Repository**
 
 - ## Please clone the **full repository (including model)** from:  
-  **`https://github.com/yousskad/Surgical-vs.-Non-Surgical-Video-segmentation.git`**
+  **`https://github.com/yousskad/Informative-vs-Uninformative-Surgical-Video-Frame-Classification.git`**
 
-### 🔹 **Place Model in Correct Directory**
+### 🔹 **Check Model in Correct Directory**
 
-- Ensure the model file is placed in the project root directory:  
+- Ensure the model file is placed in the project root directory **(open terminal from this directory)**:  
   **`streamlit-app-video-classification/`**
 
-## or,
-
-### 🔹 **Run Using Pre-Built Docker Image **
-
-To run the app directly using Docker:
-
-```bash
-docker pull crownai/surgical-video-analyzer
-```
-
-
----
-
-## Project Overview
-
-- **Task**: Binary classification of surgical vs. non-surgical video content  
-- **Model**: YOLOv8-seg (medium) fine-tuned on a custom dataset  
-- **Interface**: Streamlit-based interactive web application  
-- **Deployment Options**: Native Python environment or Docker container  
-
----
 
 ## Folder Structure
 
@@ -56,14 +45,14 @@ docker pull crownai/surgical-video-analyzer
 ```
 streamlit-app-video-classification/
 ├── app.py               # Streamlit application logic
-├── best-seg.pt          # Trained YOLOv8 model weights (not included in repo)
+├── best-seg.pt          # Trained YOLOv11 model weights (not included in repo)
 ├── requirements.txt     # Python dependencies
 └── Dockerfile           # Docker build instructions
 ```
 
 ---
 
-## Python Setup (Local Environment)
+## Python Setup (Local Environment) [Note: create a new env with python3.12 and active it]
 
 ### Prerequisites
 
@@ -114,12 +103,12 @@ streamlit-app-video-classification/
 
 ---
 
-## Docker Setup (Containerized Deployment) [Alternative]
+## Docker Setup (Containerized Deployment) [Full Alternative]
 
 ### Prerequisites
 
 - Docker Engine v20.10 or later  
-- NVIDIA GPU with CUDA 12.7 (recommended for inference acceleration)  
+- NVIDIA GPU with CUDA 12.7 (recommended for good inference acceleration)  
 - Docker Hub account (for publishing containers, if needed)  
 
 ### Steps
